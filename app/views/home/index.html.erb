@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+<h1>THE TOY LIBRARY</h1>
+<h2>welcome to the TOY LIBRARY</h2>
+  <div class="w3-bar w3-red">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Category</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/category/dolls" class="w3-bar-item w3-button">Dolls & playset</a>
+        <a href="/category/puzzles" class="w3-bar-item w3-button">Games and puzzles</a>
+        <a href="/category/construction" class="w3-bar-item w3-button">Construction and building toys</a>
+        <a href="/category/Educational" class="w3-bar-item w3-button">Educational toys</a>
+      </div>
+    </div>
+  
+   <a href="/signup" class="w3-bar-item w3-button">Signup</a>
+  <a href="/login" class="w3-bar-item w3-button">Login</a>
+  <a href="/user/payment" class="w3-bar-item w3-button">Payment</a>
+  <a href="contact" class="w3-bar-item w3-button">Contact Us</a>
+ 
+  </div>
+
+
+   
+ 
+    
+    
+<div class="w3-content w3-display-container" style="width:99vw; float:left;">
+<img class="mySlides" src=<%= asset_path "g.jpg" %>>
+<img class="mySlides" src=<%= asset_path "e.jpg" %>>
+<img class="mySlides" src=<%= asset_path "a.jpg" %>>
+
+  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+
+
+  
+  
+
+     
+  
+</body>
+</html>

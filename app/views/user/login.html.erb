@@ -1,0 +1,25 @@
+<h2>Login Form</h2>
+
+
+  
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  
+  <%= form_with model:@user , url: login_path do |form|  %>
+
+  <div class="container">
+<h1>Login</h1>
+
+<hr>
+    
+
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+ 
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+ 
+    
+  
+    <%= form.submit "Submit" %>
+    </div>
+ <% end %>

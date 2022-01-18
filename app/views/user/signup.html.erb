@@ -1,0 +1,36 @@
+<div id="signupdiv">
+
+
+<h2> Signup Form</h2>
+
+
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  
+  <%= form_with model:@user , url: signup_path do |form|  %>
+
+  <div class="container">
+<h1>Sign up</h1>
+<p> Please fill in this form to create an account</p>
+<hr>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+ 
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+ 
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+  
+    <%= form.submit "Submit" %>
+    </div>
+ <% end %>
+
+  
+      
+     
+      
+    </div>
+    
